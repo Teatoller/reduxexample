@@ -6,10 +6,12 @@ const initialState = {
 }
 
 export default function(state = initialState, action) {
-    switch(action.types) {
+    switch(action.type) {
         case FETCH_POSTS:
-          // code block
-          break;
+          return {
+              ...state,
+              items: action.payload
+          }
         case NEW_POST:
           // code block
           break;
